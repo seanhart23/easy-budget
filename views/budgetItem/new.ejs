@@ -1,0 +1,41 @@
+<div class="modal-header">
+    <h5 class="modal-title">Add an Item</h5>
+</div>
+<div class="modal-body">
+    <form action='/budgetItem' method='POST' id='formLayout'>
+        <div class="form-group">
+            Item Label: <input class='form-control' type='text' name='itemLabel' placeholder='Item Label'>
+        </div>
+        <div class='form-group'>
+            Type:
+            <select class='form-control' name="type">
+                <option value="" disabled selected>Select a type</option>
+                <option value="Income">Income</option>
+                <option value="Expense">Expense</option>
+            </select>
+        </div>                   
+        <div class='form-group'>
+            Expense Category:
+            <select class='form-control' name="category">
+                <option value="" disabled selected>Select an expense category</option>
+                <option value="Fixed">Fixed</option>
+                <option value="Variable">Variable</option>
+                <option value="Debt">Debt</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>        
+        <div class='form-group'>
+            Planned: <input class='form-control' type='number' name='planned' value='0.00' min='0.00' step='0.01'>
+        </div>
+        <div class='form-group'>
+            Actual: <input class='form-control' type='number' name='actual' value='0.00' min='0.00' step='0.01'>
+        </div>
+        <div class='form-group'>
+            Due Date (Day of the month): <input class='form-control' type='text' name='dueDate' placeholder='10'>    
+        </div>           
+        <div class='form-group'>
+            <button class="btn btn-lg btn-default btn-block btn-primary">Submit</button>
+            <a href='#' data-dismiss="modal" class='btn btn-lg bt-warning btn-block'>Go Back</a>
+        </div>
+    </form>
+</div>
