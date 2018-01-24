@@ -1,13 +1,21 @@
 body {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 td {
-    width: 14%;
+    width: 10%;
 }
 
 table {
     width: 100%;
+}
+
+.itemLabel {
+    width: 40%;    
+}
+
+.itemLabelIncome {
+    width: 50%;    
 }
 
 .navbar {

@@ -3,7 +3,7 @@
 <div class='container'>
     <div class='container col-lg-8 col-md-12'>
 <!--INCOME TABLE -->
-        <h2>Income</h2>
+        <h3>Income</h3>
         <hr>
         <div class="panel panel-default panel-success">
             <div class="panel-heading"><strong>Planned Monthly Income</strong>
@@ -11,7 +11,6 @@
                 <table class='table' id='income'>
                     <thead>
                         <tr>
-                            <th onclick='sortIncomeTable(0)'>Due Date</th>
                             <th>Item Label</th>
                             <th class='dollarAmount'>Planned</th>
                             <th class='dollarAmount'>Actual</th>
@@ -24,8 +23,7 @@
                         <% budgetItem.forEach(function(budgetItem){ %>
                             <% if(budgetItem.type === 'Income' && currentUser.username === budgetItem.author.username){ %>
                         <tr>
-                                <td><%= budgetItem.dueDate %></td>
-                                <td><%= budgetItem.itemLabel %></td>
+                                <td class='itemLabelIncome'><%= budgetItem.itemLabel %></td>
                                 <td class='dollarAmount'>$<span class='plannedIncomeTotal'><%= budgetItem.planned.toFixed(2); %></span></td>
                                 <td class='dollarAmount'>$<span class='actualIncomeTotal'><%= budgetItem.actual.toFixed(2); %></span></td>
                                 <% var variance = budgetItem.actual.toFixed(2) - budgetItem.planned.toFixed(2) %>
@@ -42,7 +40,7 @@
                     </tbody>
                 </table>
         </div>
-        <h2>Expense</h2>
+        <h3>Expense</h3>
         <hr>
 <!-- FIXED EXPENSE TABLE -->        
         <div class="panel panel-danger">
@@ -63,7 +61,7 @@
                             <% if(budgetItem.type === 'Expense' && budgetItem.category === 'Fixed' && currentUser.username === budgetItem.author.username){ %>
                         <tr>
                                 <td><%= budgetItem.dueDate %></td>
-                                <td><%= budgetItem.itemLabel %></td>
+                                <td class='itemLabel'><%= budgetItem.itemLabel %></td>
                                 <td class='dollarAmount'>$<span class='plannedExpenseTotal'><%= budgetItem.planned.toFixed(2) %></span></td>
                                 <td class='dollarAmount'>$<span class='actualExpenseTotal'><%= budgetItem.actual.toFixed(2) %></span></td>
                                 <% var variance = budgetItem.actual.toFixed(2) - budgetItem.planned.toFixed(2) %>
@@ -99,7 +97,7 @@
                             <% if(budgetItem.type === 'Expense' && budgetItem.category === 'Variable'  && currentUser.username === budgetItem.author.username){ %>
                         <tr>
                                 <td><%= budgetItem.dueDate %></td>
-                                <td><%= budgetItem.itemLabel %></td>
+                                <td class='itemLabel'><%= budgetItem.itemLabel %></td>
                                 <td class='dollarAmount'>$<span class='plannedExpenseTotal'><%= budgetItem.planned.toFixed(2) %></span></td>
                                 <td class='dollarAmount'>$<span class='actualExpenseTotal'><%= budgetItem.actual.toFixed(2) %></span></td>
                                 <% var variance = budgetItem.actual.toFixed(2) - budgetItem.planned.toFixed(2) %>
@@ -135,7 +133,7 @@
                             <% if(budgetItem.type === 'Expense' && budgetItem.category === 'Debt' && currentUser.username === budgetItem.author.username){ %>
                         <tr>
                                 <td><%= budgetItem.dueDate %></td>
-                                <td><%= budgetItem.itemLabel %></td>
+                                <td class='itemLabel'><%= budgetItem.itemLabel %></td>
                                 <td class='dollarAmount'>$<span class='plannedExpenseTotal'><%= budgetItem.planned.toFixed(2) %></span></td>
                                 <td class='dollarAmount'>$<span class='actualExpenseTotal'><%= budgetItem.actual.toFixed(2) %></span></td>
                                 <% var variance = budgetItem.actual.toFixed(2) - budgetItem.planned.toFixed(2) %>
@@ -171,7 +169,7 @@
                             <% if(budgetItem.type === 'Expense' && budgetItem.category === 'Other' && currentUser.username === budgetItem.author.username){ %>
                         <tr>
                                 <td><%= budgetItem.dueDate %></td>
-                                <td><%= budgetItem.itemLabel %></td>
+                                <td class='itemLabel'><%= budgetItem.itemLabel %></td>
                                 <td class='dollarAmount'>$<span class='plannedExpenseTotal'><%= budgetItem.planned.toFixed(2) %></span></td>
                                 <td class='dollarAmount'>$<span class='actualExpenseTotal'><%= budgetItem.actual.toFixed(2) %></span></td>
                                 <% var variance = budgetItem.actual.toFixed(2) - budgetItem.planned.toFixed(2) %>
@@ -191,7 +189,7 @@
     </div>
 <!-- TOTALS TABLE -->
     <div class='container col-lg-4 col-xs-12'>
-        <h2>Totals</h2>
+        <h3>Totals</h3>
         <hr>
         <div class="panel panel-default panel-default">
             <div class="panel-heading"><strong>Totals</strong></div>
