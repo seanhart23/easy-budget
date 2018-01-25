@@ -1,0 +1,42 @@
+body {
+    background-image: url("/images/Landing.jpg");
+    background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+html {
+	height: 100%;
+}
+
+h1 {
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4)
+	,            0px 8px 13px rgba(0,0,0,0.1)
+	,			 0px 18px 23px rgba(0,0,0,0.1);
+	font-size: 50px;
+}
+
+p {
+    margin-top: 25px;
+}
+
+.btn {
+    background-color: RGB(33, 108, 42);
+    box-shadow: 2px 2px 5px 1px #000000;
+    color: white;
+    width: 150px;
+}
+
+.btn:hover {
+    background-color: RGB(33, 108, 42);
+    box-shadow: 2px 2px 5px 1px #000000;
+    color: lightgray;
+}
+
+#content {
+	text-align: center;
+	padding-top: 130px;
+	color: white;
+	height: 100%;
+}
+

@@ -3,28 +3,37 @@ body {
 }
 
 td {
-    width: 10%;
+    width: 11.5%;
 }
 
 table {
     width: 100%;
 }
 
+.navbar-nav>li>a:hover{
+    background-color: green; 
+}
+
 .itemLabel {
-    width: 40%;    
+    width: 30%;    
 }
 
 .itemLabelIncome {
-    width: 50%;    
+    width: 41.5%;    
 }
 
 .navbar {
     background-color: RGB(33, 108, 42);
     border-radius: 0px;
     color: white;
+    box-shadow: 0px 0px 8px 2px #000000;
 }
 
 .navbar-brand {
+    color: white;
+}
+
+.navbar-brand:hover {
     color: white;
 }
 
@@ -40,6 +49,14 @@ table {
     padding-top: 0px;
 }
 
+#userID {
+    padding-top: 15px;
+    padding-right: 100px;
+}
 .dollarAmount {
   text-align: right;
+}
+
+.actions{
+    text-align: center;
 }
