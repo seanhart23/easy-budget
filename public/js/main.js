@@ -64,8 +64,7 @@ function sortTable(n, name) {
   }
 }
 
-sortTable(0, 'income');
 sortTable(0, 'FixedExpense');
 sortTable(0, 'VariableExpense');
 sortTable(0, 'Debt');
-sortTable(0, 'OtherEexpense');
+sortTable(0, 'OtherExpense');
